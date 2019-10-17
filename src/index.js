@@ -1,5 +1,4 @@
 import React from 'react';
-import {Text} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
@@ -8,8 +7,6 @@ import Icon from 'react-native-vector-icons/AntDesign';
 //Pages
 import Home from './pages/Home';
 import Settings from './pages/Settings';
-
-import Header from './components/Header';
 
 const icons = {
   Home: {iconName: 'home'},

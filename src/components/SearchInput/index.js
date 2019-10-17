@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Header = () => {
+const SearchInput = () => {
   return (
     <View style={[styles.container]}>
       <View style={styles.searchInput}>
@@ -56,6 +56,6 @@ const Header = () => {
   );
 };
 
-Header.defaultProps = {};
+SearchInput.defaultProps = {};
 
-export default Header;
+export default SearchInput;
