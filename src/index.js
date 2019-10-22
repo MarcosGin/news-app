@@ -1,8 +1,11 @@
 import React from 'react';
+import {Provider} from 'react-redux';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import Icon from 'react-native-vector-icons/AntDesign';
+//Redux
+import store from './store';
 
 //Pages
 import Home from './pages/Home';
@@ -45,4 +48,14 @@ const tabs = createBottomTabNavigator(
   },
 );
 
-export default createAppContainer(tabs);
+let Navigation = createAppContainer(tabs);
+
+const App = () => {
+  return (
+    <Provider store={store}>
+      <Navigation />
+    </Provider>
+  );
+};
+
+export default App;

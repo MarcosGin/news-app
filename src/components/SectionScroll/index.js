@@ -3,6 +3,13 @@ import {ScrollView, View, Text} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const SectionScroll = ({items}) => {
+  if (items.length === 0) {
+    return (
+      <View>
+        <Text>Loading...</Text>
+      </View>
+    );
+  }
   return (
     <View style={{marginLeft: 24, marginBottom: 30}}>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
@@ -13,7 +20,7 @@ const SectionScroll = ({items}) => {
               style={{alignItems: 'center', width: 70, marginRight: 20}}>
               <View
                 style={{
-                  backgroundColor: item.color,
+                  backgroundColor: item.style.color,
                   height: 66,
                   width: 66,
                   justifyContent: 'center',
