@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const SectionScroll = ({items}) => {
   return (
-    <View style={{marginLeft: 24, marginBottom: 40}}>
+    <View style={{marginLeft: 24, marginBottom: 30}}>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         {items.map(item => {
           return (
